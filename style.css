@@ -5,7 +5,15 @@ body{
 }
 
 #main{
+    margin-top:200px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:2em;
+    margin-bottom: 50px;
+}
+
+#start{
+    margin-top:50px;
+    font-size: 0.5em;
 }
 
 .wrapper{
@@ -18,6 +26,42 @@ body{
     display:block;
 }
 
+#question{
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+#score{
+    margin-top:250px;
+}
+
 button{
-    
+    margin: 10px;
+    width: 80%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    font-size: 1em;
+}
+
+#result{
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#result .summary{
+    margin-top:50px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    height: 20px;
+}
+
+.success{
+    background-color: green;
+}
+
+.fail{
+    background-color: red;
 }

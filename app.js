@@ -82,7 +82,7 @@
         },
         {
             questionId: 4,
-            questionText: "Z kad pochodzi Bialy wilk?",
+            questionText: "Skad pochodzi Bialy wilk?",
             answers: [{
                 id: 1,
                 text: "Z mokotowa",
@@ -221,6 +221,7 @@ $('button#start').click(function(){
 });
 
 $('#answers button').click(function(){
+    $('#answers button').attr("disabled", true);
     if(Game.AnswerQuestion($(this).data('answer')))
     {
         ShowCorrect();
@@ -233,6 +234,8 @@ $('#answers button').click(function(){
     HideResult();
     setTimeout(() => {
         GetNextQuestion();
+        $('#result .summary').removeClass('success').removeClass('fail');
+        $('#answers button').attr("disabled", false);
     }, 1500);
 });
 
@@ -251,11 +254,11 @@ function SetQuestion(question){
 }
 
 function ShowCorrect(){
-    $('#result .summary').toggleClass('succes').text('Poprawna odpowiedz!').show();
+    $('#result .summary').addClass('success').text('Poprawna odpowiedz!').show();
 }
 
 function ShowIncorrect(){
-    $('#result .summary').toggleClass('fail').text('Bledna odpowiedz :(').show();
+    $('#result .summary').addClass('fail').text('Bledna odpowiedz :(').show();
 }
 
 function HideResult(){
