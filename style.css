@@ -1,0 +1,23 @@
+body{
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+#main{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main span{
+    display:block;
+}
+
+button{
+    
+}
